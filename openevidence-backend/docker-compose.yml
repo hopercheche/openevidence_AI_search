@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  openevidence-backend:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - BAICHUAN_API_KEY=${BAICHUAN_API_KEY}
+      - BAICHUAN_BASE_URL=${BAICHUAN_BASE_URL:-https://api.baichuan-ai.com/v1/}
+      - FLASK_ENV=${FLASK_ENV:-production}
+      - HOST=0.0.0.0
+      - PORT=8000
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # 可选：Redis 缓存
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+
+  # 可选：Nginx 反向代理
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - openevidence-backend
+    restart: unless-stopped
+
+volumes:
+  redis_data:
