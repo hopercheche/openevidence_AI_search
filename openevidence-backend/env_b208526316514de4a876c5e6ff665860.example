@@ -3,7 +3,7 @@
 
 # ===== 必需配置 =====
 # Baichuan M2 Plus API 配置
-BAICHUAN_API_KEY=sk-629b79d9a52dfc44045dff02e71beea3  # 替换为你的 Baichuan API Key
+BAICHUAN_API_KEY=sk-xxx  # 替换为你的 Baichuan API Key
 BAICHUAN_BASE_URL=https://api.baichuan-ai.com/v1/
 
 # ===== Flask 配置 =====
