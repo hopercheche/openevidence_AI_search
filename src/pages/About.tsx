@@ -19,7 +19,7 @@ const About = () => {
             <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">O</span>
             </div>
-            <span className="text-xl font-semibold text-gray-900">OpenEvidence</span>
+            <span className="text-xl font-semibold text-gray-900">DeepEvidence</span>
           </div>
         </div>
         
@@ -38,7 +38,7 @@ const About = () => {
 
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">About OpenEvidence</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">About DeepEvidence</h1>
           <p className="text-xl text-gray-600">
             Empowering healthcare professionals with evidence-based medical intelligence
           </p>
@@ -48,7 +48,7 @@ const About = () => {
           <Card className="p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h2>
             <p className="text-gray-700 leading-relaxed">
-              OpenEvidence is dedicated to providing healthcare professionals with instant access to 
+              DeepEvidence is dedicated to providing healthcare professionals with instant access to 
               evidence-based medical information. We leverage advanced AI technology to synthesize 
               the latest medical literature, clinical guidelines, and regulatory information to help 
               clinicians make informed decisions at the point of care.
@@ -85,7 +85,7 @@ const About = () => {
           <Card className="p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Partnerships</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              OpenEvidence has established strategic content agreements with leading medical publishers 
+              DeepEvidence has established strategic content agreements with leading medical publishers 
               to ensure comprehensive access to high-quality medical literature:
             </p>
             <ul className="space-y-2 text-gray-700">
@@ -109,7 +109,7 @@ const About = () => {
           <Card className="p-8 bg-blue-50 border-blue-200">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Join Our Community</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Join thousands of healthcare professionals who trust OpenEvidence for their 
+              Join thousands of healthcare professionals who trust DeepEvidence for their 
               clinical decision-making needs. Experience the power of evidence-based medicine 
               at your fingertips.
             </p>
