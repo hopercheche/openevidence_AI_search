@@ -19,7 +19,7 @@ const BAA = () => {
             <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">O</span>
             </div>
-            <span className="text-xl font-semibold text-gray-900">OpenEvidence</span>
+            <span className="text-xl font-semibold text-gray-900">DeepEvidence</span>
           </div>
         </div>
         
@@ -48,7 +48,7 @@ const BAA = () => {
           <Card className="p-8 bg-blue-50 border-blue-200">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">HIPAA Compliance Overview</h2>
             <p className="text-gray-700 leading-relaxed">
-              OpenEvidence is committed to maintaining the highest standards of data protection 
+              DeepEvidence is committed to maintaining the highest standards of data protection 
               and privacy for healthcare organizations. Our Business Associate Agreement (BAA) 
               ensures full compliance with HIPAA regulations for the handling of Protected Health 
               Information (PHI).
@@ -63,7 +63,7 @@ const BAA = () => {
               (PHI) in accordance with HIPAA requirements.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              As a business associate, OpenEvidence agrees to implement appropriate safeguards 
+              As a business associate, DeepEvidence agrees to implement appropriate safeguards 
               to protect the confidentiality, integrity, and availability of PHI that we may 
               create, receive, maintain, or transmit on behalf of covered entities.
             </p>
@@ -144,7 +144,7 @@ const BAA = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Request a BAA</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
               If your healthcare organization requires a Business Associate Agreement to use 
-              OpenEvidence services, please contact our compliance team. We'll work with you 
+              DeepEvidence services, please contact our compliance team. We'll work with you 
               to execute a BAA that meets your specific requirements and ensures full HIPAA compliance.
             </p>
             <div className="space-y-4">
