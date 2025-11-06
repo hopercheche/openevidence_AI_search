@@ -19,7 +19,7 @@ const TermsOfService = () => {
             <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">O</span>
             </div>
-            <span className="text-xl font-semibold text-gray-900">OpenEvidence</span>
+            <span className="text-xl font-semibold text-gray-900">DeepEvidence</span>
           </div>
         </div>
         
@@ -48,7 +48,7 @@ const TermsOfService = () => {
           <Card className="p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Acceptance of Terms</h2>
             <p className="text-gray-700 leading-relaxed">
-              By accessing and using OpenEvidence, you accept and agree to be bound by the terms 
+              By accessing and using DeepEvidence, you accept and agree to be bound by the terms 
               and provision of this agreement. If you do not agree to abide by the above, please 
               do not use this service.
             </p>
@@ -57,7 +57,7 @@ const TermsOfService = () => {
           <Card className="p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Use License</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Permission is granted to temporarily access OpenEvidence for personal, 
+              Permission is granted to temporarily access DeepEvidence for personal, 
               non-commercial transitory viewing only. This is the grant of a license, not a 
               transfer of title, and under this license you may not:
             </p>
@@ -72,7 +72,7 @@ const TermsOfService = () => {
           <Card className="p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Medical Disclaimer</h2>
             <p className="text-gray-700 leading-relaxed">
-              OpenEvidence provides information for educational purposes only. The information 
+              DeepEvidence provides information for educational purposes only. The information 
               provided is not intended to replace professional medical advice, diagnosis, or 
               treatment. Always seek the advice of your physician or other qualified health 
               provider with any questions you may have regarding a medical condition.
