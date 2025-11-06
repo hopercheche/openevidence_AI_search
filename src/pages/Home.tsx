@@ -55,7 +55,7 @@ const Home = () => {
             <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">O</span>
             </div>
-            <span className="text-xl font-semibold text-gray-900">OpenEvidence</span>
+            <span className="text-xl font-semibold text-gray-900">DeepEvidence</span>
           </div>
         </div>
         
@@ -81,7 +81,7 @@ const Home = () => {
               <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mr-4">
                 <span className="text-white font-bold text-2xl">O</span>
               </div>
-              <h1 className="text-4xl font-bold text-gray-900">OpenEvidence</h1>
+              <h1 className="text-4xl font-bold text-gray-900">DeepEvidence</h1>
             </div>
             <p className="text-xl text-gray-600 mb-2">
               Get evidence-based answers to your medical questions
@@ -184,7 +184,7 @@ const Home = () => {
                 <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-xs">O</span>
                 </div>
-                <span className="font-semibold text-gray-900">OpenEvidence</span>
+                <span className="font-semibold text-gray-900">DeepEvidence</span>
               </div>
               <p className="text-sm text-gray-600">
                 Evidence-based medical information for healthcare professionals and researchers.
@@ -219,7 +219,7 @@ const Home = () => {
           </div>
           
           <div className="border-t mt-8 pt-8 text-center text-sm text-gray-500">
-            <p>&copy; 2024 OpenEvidence. All rights reserved.</p>
+            <p>&copy; 2024 DeepEvidence. All rights reserved.</p>
           </div>
         </div>
       </footer>
