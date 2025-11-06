@@ -20,7 +20,7 @@ const Security = () => {
             <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">O</span>
             </div>
-            <span className="text-xl font-semibold text-gray-900">OpenEvidence</span>
+            <span className="text-xl font-semibold text-gray-900">DeepEvidence</span>
           </div>
         </div>
         
