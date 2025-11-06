@@ -19,7 +19,7 @@ const HelpCenter = () => {
             <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">O</span>
             </div>
-            <span className="text-xl font-semibold text-gray-900">OpenEvidence</span>
+            <span className="text-xl font-semibold text-gray-900">DeepEvidence</span>
           </div>
         </div>
         
@@ -92,7 +92,7 @@ const HelpCenter = () => {
               <div>
                 <h3 className="text-lg font-medium text-gray-900 mb-2">Creating an account</h3>
                 <p className="text-gray-700">
-                  While you can use OpenEvidence without an account, creating one allows you to save 
+                  While you can use DeepEvidence without an account, creating one allows you to save 
                   your search history and customize your preferences.
                 </p>
               </div>
@@ -105,7 +105,7 @@ const HelpCenter = () => {
               <div>
                 <h3 className="text-lg font-medium text-gray-900 mb-2">What types of questions can I ask?</h3>
                 <p className="text-gray-700">
-                  You can ask any medical or healthcare-related question. OpenEvidence works best with 
+                  You can ask any medical or healthcare-related question. DeepEvidence works best with 
                   specific clinical questions about treatments, diagnoses, drug interactions, guidelines, 
                   and evidence-based practices.
                 </p>
@@ -122,7 +122,7 @@ const HelpCenter = () => {
               <div>
                 <h3 className="text-lg font-medium text-gray-900 mb-2">Can I use this for patient care decisions?</h3>
                 <p className="text-gray-700">
-                  OpenEvidence provides evidence-based information to support clinical decision-making, 
+                  DeepEvidence provides evidence-based information to support clinical decision-making, 
                   but it should not replace professional medical judgment or direct patient care protocols.
                 </p>
               </div>
@@ -136,9 +136,9 @@ const HelpCenter = () => {
               </div>
               
               <div>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">How do I cite OpenEvidence in my work?</h3>
+                <h3 className="text-lg font-medium text-gray-900 mb-2">How do I cite DeepEvidence in my work?</h3>
                 <p className="text-gray-700">
-                  While OpenEvidence provides synthesized information, we recommend citing the original 
+                  While DeepEvidence provides synthesized information, we recommend citing the original 
                   sources provided in our reference lists for academic or professional publications.
                 </p>
               </div>
@@ -176,7 +176,7 @@ const HelpCenter = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Still Need Help?</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
               Can't find what you're looking for? Our support team is here to help you get the most 
-              out of OpenEvidence.
+              out of DeepEvidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-blue-600 hover:bg-blue-700">
