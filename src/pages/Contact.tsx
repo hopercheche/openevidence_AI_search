@@ -19,7 +19,7 @@ const Contact = () => {
             <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">O</span>
             </div>
-            <span className="text-xl font-semibold text-gray-900">OpenEvidence</span>
+            <span className="text-xl font-semibold text-gray-900">DeepEvidence</span>
           </div>
         </div>
         
@@ -101,7 +101,7 @@ const Contact = () => {
               <h2 className="text-2xl font-semibold text-gray-900">Office Location</h2>
             </div>
             <div className="text-gray-700">
-              <p>OpenEvidence Inc.</p>
+              <p>DeepEvidence Inc.</p>
               <p>123 Medical Center Drive</p>
               <p>Suite 456</p>
               <p>San Francisco, CA 94102</p>
@@ -113,19 +113,19 @@ const Contact = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <div className="space-y-4">
               <div>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">How do I get started with OpenEvidence?</h3>
+                <h3 className="text-lg font-medium text-gray-900 mb-2">How do I get started with DeepEvidence?</h3>
                 <p className="text-gray-700">
                   Simply create a free account and start asking medical questions. No setup required.
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">Is OpenEvidence HIPAA compliant?</h3>
+                <h3 className="text-lg font-medium text-gray-900 mb-2">Is DeepEvidence HIPAA compliant?</h3>
                 <p className="text-gray-700">
                   Yes, we offer HIPAA-compliant services and can provide Business Associate Agreements for healthcare organizations.
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">What sources does OpenEvidence use?</h3>
+                <h3 className="text-lg font-medium text-gray-900 mb-2">What sources does DeepEvidence use?</h3>
                 <p className="text-gray-700">
                   We synthesize information from peer-reviewed medical literature, clinical guidelines, FDA approvals, and other authoritative medical sources.
                 </p>
