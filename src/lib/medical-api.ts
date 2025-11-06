@@ -156,8 +156,9 @@ class MedicalAPI {
     // 根据环境自动选择API地址
     this.baseUrl = baseUrl || 
       (typeof window !== 'undefined' && window.location.hostname === 'localhost' 
-        ? 'http://localhost:8000' 
-        : 'https://your-backend-domain.com');
+        ? 'http://154.93.109.243:8001' 
+        //: 'http://154.93.109.243:8001');
+	: 'http://workspace.featurize.cn:44401');
   }
 
   /**
