@@ -19,7 +19,7 @@ const Announcements = () => {
             <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">O</span>
             </div>
-            <span className="text-xl font-semibold text-gray-900">OpenEvidence</span>
+            <span className="text-xl font-semibold text-gray-900">DeepEvidence</span>
           </div>
         </div>
         
@@ -40,7 +40,7 @@ const Announcements = () => {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Announcements</h1>
           <p className="text-xl text-gray-600">
-            Latest news and updates from OpenEvidence
+            Latest news and updates from DeepEvidence
           </p>
         </div>
 
@@ -49,7 +49,7 @@ const Announcements = () => {
             <div className="flex items-start justify-between mb-4">
               <div>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-2">
-                  OpenEvidence Partners with Leading Medical Journals
+                  DeepEvidence Partners with Leading Medical Journals
                 </h2>
                 <p className="text-sm text-gray-500">March 15, 2024</p>
               </div>
