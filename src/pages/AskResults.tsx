@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+import { Button } from '@/components/ui/button';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
@@ -48,6 +54,17 @@ const AskResults = () => {
   
   const initialQuestion = searchParams.get('q') || '';
 
+  // 获取完整答案内容
+  const getFullAnswerContent = () => {
+  const fullContent = answerSegments.map(segment => segment.text).join('');
+  return fullContent.trim();
+  };
+
+  // 判断是否应该显示默认消息
+  const shouldShowDefaultMessage = () => {
+  return !isStreaming && answerSegments.length === 0;
+  };
+ 
   useEffect(() => {
     setQuestion(initialQuestion);
     if (initialQuestion.trim()) {
@@ -344,7 +361,7 @@ const AskResults = () => {
             <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">O</span>
             </div>
-            <span className="text-xl font-semibold text-gray-900">OpenEvidence</span>
+            <span className="text-xl font-semibold text-gray-900">DeepEvidence</span>
           </div>
         </div>
         
@@ -440,19 +457,56 @@ const AskResults = () => {
             <Card className="p-6 mb-8">
               <div className="prose max-w-none">
                 <div className="text-lg leading-relaxed text-gray-900">
-                  {answerSegments.map((segment, index) => (
-                    <span key={index} className="inline">
-                      {segment.text}
-                      {segment.citations.length > 0 && (
-                        <CitationMark citations={segment.citations} />
-                      )}
-                    </span>
-                  ))}
+                  {shouldShowDefaultMessage() ? (
+                    // 显示默认消息
+                    <div className="text-center py-8">
+                      <div className="text-gray-600 text-lg">您的问题超出医学范围，无法回答</div>
+                    </div>
+                  ) : isStreaming && answerSegments.length === 0 ? (
+                    // 正在加载
+                    <div className="text-gray-500">正在生成回答...</div>
+                  ) : answerSegments.length > 0 ? (
+                    // 有内容时，逐段渲染以保持 citations
+                    <div className="markdown-content">
+                      {answerSegments.map((segment, index) => (
+                        <span key={index} className="inline">
+                          <ReactMarkdown
+                            remarkPlugins={[remarkGfm]}
+                            rehypePlugins={[rehypeRaw]}
+                            className="inline-markdown"
+                            components={{
+                              // 内联渲染组件
+                              p: ({ children }) => <span className="inline">{children}</span>,
+                              h1: ({ children }) => <h1 className="text-2xl font-bold mb-4 block">{children}</h1>,
+                              h2: ({ children }) => <h2 className="text-xl font-semibold mb-3 block">{children}</h2>,
+                              h3: ({ children }) => <h3 className="text-lg font-medium mb-2 block">{children}</h3>,
+                              ul: ({ children }) => <ul className="list-disc list-inside mb-4 space-y-1 block">{children}</ul>,
+                              ol: ({ children }) => <ol className="list-decimal list-inside mb-4 space-y-1 block">{children}</ol>,
+                              li: ({ children }) => <li className="mb-1">{children}</li>,
+                              strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
+                              em: ({ children }) => <em className="italic">{children}</em>,
+                              code: ({ children }) => <code className="bg-gray-100 px-1 py-0.5 rounded text-sm font-mono">{children}</code>,
+                              pre: ({ children }) => <pre className="bg-gray-100 p-3 rounded-lg overflow-x-auto mb-4 block">{children}</pre>,
+                              blockquote: ({ children }) => <blockquote className="border-l-4 border-gray-300 pl-4 italic mb-4 block">{children}</blockquote>,
+                            }}
+                          >
+                            {segment.text}
+                          </ReactMarkdown>
+                          {segment.citations.length > 0 && (
+                            <CitationMark citations={segment.citations} />
+                          )}
+                        </span>
+                      ))}
+                    </div>
+                  ) : (
+                    // 备用显示
+                    <div className="text-gray-500">暂无内容</div>
+                  )}
                   {isStreaming && <span className="streaming-cursor">|</span>}
                 </div>
               </div>
-              
-              {!isLoading && answerSegments.length > 0 && (
+
+                {!isLoading && answerSegments.length > 0 && (
                 <div className="flex items-center space-x-4 mt-6 pt-4 border-t">
                   <Button variant="ghost" size="sm">
                     <ThumbsUp className="h-4 w-4 mr-2" />
